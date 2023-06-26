@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guybrush Threepwood</title>
+    <style>  
+        body {
+            margin:0;
+            background:#000;
+        }
+
+        #cielo {
+            background:url(https://cdn.rawgit.com/ManzDev/cursos-assets/gh-pages/css3/monkey-sky.png) repeat-X;
+            animation: fondo 9s linear infinite;
+        }
+
+        #mar {
+            background:url(https://cdn.rawgit.com/ManzDev/cursos-assets/gh-pages/css3/monkey-sea.png) repeat-x;
+            box-shadow:10px 10px 45px RGBA(0,0,0, 0.95) inset;
+            animation: fondo 7s linear infinite;
+            position:relative;
+            top:145px;
+        }
+
+        @keyframes fondo {
+            0% { background-position:550px }
+            100% { background-position:0 }
+        }
+        
+        #guybrush {
+            width:104px;
+            height:150px;
+            background:url(https://cdn.rawgit.com/ManzDev/cursos-assets/gh-pages/css3/monkey-guybrush.png) no-repeat;
+            animation:andar 1s steps(6) infinite;
+            margin:auto;
+            position:relative;
+            bottom:34px;
+        }
+        @keyframes andar {
+            0% { background-position:0 }
+            100% { background-position:-624px }
+        }
+    </style>
+</head>
+<body>
+    <div id="cielo">
+        <div id="mar">
+          <div id="guybrush"></div>
+        </div>
+      </div>
+</body>
+</html>

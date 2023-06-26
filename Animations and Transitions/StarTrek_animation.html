@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url('espacio.jpg');
+        }
+        #img1{
+            width:200px;
+            height:auto;
+            position:relative;
+            top:0px;
+            left:-450px;
+            animation:nave 8s linear;
+        }
+        @keyframes nave{
+            0%{
+                top:0px;
+                left:-450px;
+            }
+            50%{
+                top:400px;
+                left:425px;
+                width:950px;
+                height:auto; 
+            }
+            100%{
+                top:800px;
+                left:1500px;
+                width:1700px;
+                height:auto;
+            }
+        }
+        #img2{
+            width:400px;
+            height:auto;
+            position:fixed;
+            top:50px;
+            left:1000px;
+            animation: crece 1s; 
+        }
+        @keyframes crece {
+            0% { width: 0px; }
+            50%{ width: 200px;}
+            100% { width: 400px; }
+        }
+    </style>
+</head>
+<body>
+    <img id="img1" src="enterprise.png" alt="enterprise">
+    <img id="img2" src="Star-Trek-Logo.png" alt="logo">
+</body>
+</html>

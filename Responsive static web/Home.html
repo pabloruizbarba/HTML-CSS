@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paruba - Surf&Soul</title>
+    <style>
+        *{
+            box-sizing: content-box;
+            margin:0px;
+            padding:0px;
+        }
+
+        body{
+            background-color: black;
+        }
+        
+        /* HEADER */
+
+        header{
+            display:grid;
+            grid-template-columns: 20% 70% 10%;
+            background-color: black;
+            position:sticky;
+            top:0;
+        }
+        .logo img{width:60%;}
+        .icons{
+            display: grid; 
+            grid-template-columns: auto;
+            grid-template-rows: 60% 40%;
+        }
+        .flags > a > img{
+            width:40px;
+            padding-top:10%;
+        }
+        .cart img{width:40px;}
+        .menu{
+            width:60%;
+            margin:auto;
+            margin-bottom:0%;
+        }
+        .menu a{
+            text-decoration:none ;
+            text-decoration: none;
+            color: black;
+            background-color: #00FFFF;
+            border: 1px solid black; 
+            text-align: center;
+            font-family: impact;;
+            padding:2%;
+            width:60px;
+            display: inline-block;
+        }
+        .menu a:hover{
+            color:white;
+            background-color: rgb(250,169,48);
+        }
+
+        .menu a.activ{ color:rgb(250,169,48); }
+        .menu a.activ:hover{ background: #00FFFF;}
+           
+        /*Main image*/
+        
+        .photo img{
+            width:100%;
+        }
+       
+         /* FOOTER */
+
+         footer{
+            display: grid;
+            grid-template-columns: 80% 20%;
+         }
+         .links{
+            margin-top:3%;
+            margin-left:2%;
+         }
+         .social{
+            margin-top:7%;
+            margin-bottom: 7%;
+           
+         }
+         .links a{
+            text-decoration: none;
+            color:#00FFFF;
+            font-family: impact;
+            margin-right: 10px;
+         }
+         .links a:hover{
+            color:rgb(250,169,48);
+         }
+         .social > a > img{
+            padding-left:10%;
+            width:40px;
+         }
+
+         @media screen and (max-width:500px){
+            .logo {width:100%;}
+            .logo img{width:100%;}
+            .menu{width:100%;}
+            .menu a{width:100%;}
+            
+            header {
+                grid-template-columns: 100%;
+                grid-template-areas: 'logo'
+                                    'icons' 
+                                    'menu';
+                grid-template-rows: auto auto auto;
+                position:initial;
+            }
+            .icons{
+                width:100%;
+                grid-template-columns: 100%;
+                grid-template-areas: 'flags' 
+                                    'cart';
+                grid-template-rows: 50% 50%;
+            }
+            .flags{
+                margin-left: 40%;
+            }
+            .cart{
+                margin-top: 5%;
+                margin-left: 45%;
+                margin-bottom: 5%;
+            }
+            .photo{width:100%;}
+            .photo img{width:100%;}
+            footer{
+                display: flex;
+                flex-direction: column;
+            }
+            .links{
+                display:flex;
+                flex-direction: column;
+                width:100%;
+            }
+            .links a{margin-left: 25%;}
+            .social{
+                display:flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+            .social > a > img{
+                padding-left:10%;
+                width:20px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <a class="logo" href="Home.html"><img src="Paruba.png" alt="logo" title="Home"></a>
+        <div class="menu">
+            <a class="activ">HOME</a><a href="Boards.html">BOARDS</a><a href="Shaper1.html">SHAPERS</a><a href="About.html">ABOUT</a><a href="Contact.html">CONTACT</a>
+        </div>    
+     
+        <div class="icons">
+            <div class="flags">
+                <a><img src="united-kingdom.png" alt="English" title="English"></a>
+                <a href="Home_afrikaans.html"><img src="south-africa.png" alt="Afrikaans" title="Afrikaans"></a>
+            </div>
+            <a class="cart" href="Basket.html"><img src="carrito.png" alt="Shopping_cart" title="Shopping cart"></a>
+        </div>     
+    </header>
+
+    <div class="photo">
+        <img src="Durban.jpg" alt="Durban beach">
+    </div>
+
+    <footer>
+        <div class="links">
+            <a href="#">Sitemap</a>
+            <a href="#">Privacy policy</a>
+            <a href="#">Refund policy</a>
+            <a href="#">Terms of policy</a>
+        </div>
+        
+        <div class="social">
+            <a href="https://www.instagram.com/safarisurfboards/" target="blank"><img src="instagram.png" alt="instagram" title="instagram"></a>
+            <a href="https://es-es.facebook.com/safari1965/" target="blank"><img src="facebook.png" alt="fb" title="fb"></a>
+            <a href="https://www.youtube.com/channel/UCDc9w643iZxPVB2L3_O03sQ" target="blank"><img src="youtube.png" alt="yt" title="yt"></a>
+        </div>
+    </footer>
+</body>
+</html>

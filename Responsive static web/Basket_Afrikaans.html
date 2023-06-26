@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paruba - Surf&Soul</title>
+    <style>
+        *{
+            box-sizing: content-box;
+            margin:0px;
+            padding:0px;
+        }
+
+        body{
+            background-color: black;
+        }
+        
+        /* HEADER */
+
+        header{
+            display:grid;
+            grid-template-columns: 20% 70% 10%;
+            background-color: black;
+            position:sticky;
+            top:0;
+        }
+        .logo img{width:60%;}
+        .icons{
+            display: grid; 
+            grid-template-columns: auto;
+            grid-template-rows: 60% 40%;
+        }
+        .flags > a > img{
+            width:40px;
+            padding-top:10%;
+        }
+        .cart img{width:40px;}
+        .menu{
+            width:60%;
+            margin:auto;
+            margin-bottom:0%;
+        }
+        .menu a{
+            text-decoration:none ;
+            text-decoration: none;
+            color: black;
+            background-color: #00FFFF;
+            border: 1px solid black; 
+            text-align: center;
+            font-family: impact;;
+            padding:2%;
+            width:60px;
+            display: inline-block;
+        }
+        .menu a:hover{
+            color:white;
+            background-color: rgb(250,169,48);
+        }
+
+        .menu a.activ{ color:rgb(250,169,48); }
+        .menu a.activ:hover{ background: #00FFFF;}
+           
+        /*MAIN*/
+
+        .main{
+            background-color: white;
+            padding: 0%;
+            margin:0%;
+            display: grid;
+            grid-template-columns: 40% 60%;
+        }
+        
+        /* CESTA */
+        .left{
+            display: flex;
+            flex-direction: column;
+            margin-top:5%;
+            margin-left: 15%;
+            margin-right:15%;
+        }
+        .left h2{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: rgb(250,169,48);
+        }
+        .basket{
+            display:flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        .row1 {
+            display:flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin-top: 5%;
+            margin-bottom:5%;
+        }
+        .items{ width:75%;}
+        .price{width:25%;}
+        .rowItems{
+            display:flex;
+            flex-direction: row;
+            margin-bottom:5%;
+        }
+        .line{
+            width:75%;
+            display:flex;
+            flex-direction: row;
+        }
+        .board{
+            width:30px;
+            height:auto;
+            margin-right:2%;
+        }
+        .trash{
+            width:auto;
+            height:20px;;
+            margin-left:25%;
+            margin-right:5%;
+        }
+        hr{margin-top:5%;}
+        /*FORMULARIO*/
+
+        form {
+            width:40%;
+            margin-left:10%;
+            margin-right:40%;
+            padding-top:3%;
+            padding-bottom:2%;
+        }
+        input, select{
+            display:block;
+            margin-bottom: 2%;
+            padding:1%;
+        }
+        /* Voy a dar colores al formulario mediante selectores de atributos para practicar:*/
+        input[type~="submit"]{
+            background-color: black;
+            color:#00FFFF;
+            font-family: impact;
+        }
+         input[type^="text"]{
+            background-color: #00FFFF;
+            font-family:Arial;
+         }
+         input[type^="email"]{
+            background-color: #00FFFF;
+            font-family:Arial;
+         }
+         select{
+            background-color: #00FFFF;
+            font-family:Arial;
+         }
+         input[type~="submit"]:hover{
+            color:rgb(250,169,48);
+         }
+        
+        
+         /* FOOTER */
+
+         footer{
+            display: grid;
+            grid-template-columns: 80% 20%;
+         }
+         .links{
+            margin-top:3%;
+            margin-left:2%;
+         }
+         .social{
+            margin-top:7%;
+            margin-bottom: 7%;
+           
+         }
+         .links a{
+            text-decoration: none;
+            color:#00FFFF;
+            font-family: impact;
+            margin-right: 10px;
+         }
+         .links a:hover{
+            color:rgb(250,169,48);
+         }
+         .social > a > img{
+            padding-left:10%;
+            width:40px;
+         }
+
+         @media screen and (max-width:500px){
+            .logo {width:100%;}
+            .logo img{width:100%;}
+            .menu{width:100%;}
+            .menu a{width:100%;}
+            
+            header {
+                grid-template-columns: 100%;
+                grid-template-areas: 'logo'
+                                    'icons' 
+                                    'menu';
+                grid-template-rows: auto auto auto;
+                position:initial;
+            }
+            .icons{
+                width:100%;
+                grid-template-columns: 100%;
+                grid-template-areas: 'flags' 
+                                    'cart';
+                grid-template-rows: 50% 50%;
+            }
+            .flags{
+                margin-left: 40%;
+            }
+            .cart{
+                margin-top: 5%;
+                margin-left: 45%;
+                margin-bottom: 5%;
+            }
+            
+            .main{
+                grid-template-columns: 100%;
+                grid-template-areas: 'left'
+                                    'right';
+                grid-template-rows: auto auto;
+            }
+            
+            .left{width:80%;}
+
+            .right{
+                margin-top:5%;
+                width:100%;
+            }
+            form{width:100%;}
+            input, select{
+                margin-bottom: 10%;
+                margin-left:5%;
+                width:60%;
+            }
+
+            footer{
+                display: flex;
+                flex-direction: column;
+            }
+            .links{
+                display:flex;
+                flex-direction: column;
+                width:100%;
+            }
+            .links a{margin-left: 25%;}
+            .social{
+                display:flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+            .social > a > img{
+                padding-left:10%;
+                width:20px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <a class="logo" href="Home.html"><img src="Paruba.png" alt="logo" title="Home"></a>
+        <div class="menu">
+            <a href="Home_Afrikaans.html">TUIS</a><a href="Boards_Afrikaans.html">BORDE</a><a href="Shaper1_Afrikaans.html">SHAPERS</a><a href="About_Afrikaans.html">OOR</a><a href="Contact_Afrikaans.html">KONTAK</a>
+        </div>    
+     
+        <div class="icons">
+            <div class="flags">
+                <a href="Basket.html"><img src="united-kingdom.png" alt="English" title="English"></a>
+                <a><img src="south-africa.png" alt="Afrikaans" title="Afrikaans"></a>
+            </div>
+            <a class="cart" href="Basket_Afrikaans.html"><img src="carrito.png" alt="Shopping_cart" title="Shopping cart"></a>
+        </div>     
+    </header>
+
+    <div class="main"> 
+        <div class="left">
+            <h2>JOU MANDJIE:</h2>
+            <div class="basket">
+                <div class="row1">
+                    <div class="items"><h4>Items:</h4></div>
+                    <div class="price"><h4>Prys:</h4></div>
+                </div>
+                <div class="rowItems">
+                    <div class="line">
+                        <img src="Evo_model.jpg" class="board" alt="Evo board">
+                        <p>Evo board.   Grootte:   7'0''</p>
+                        <img src="trash.png" class="trash" alt="trash can">
+                    </div>
+                    <div class="price">
+                        <p>R 8,800</p>
+                    </div>
+                </div>
+                <div class="rowItems">
+                    <div class="line">
+                        <img src="Egg_model.jpg" class="board" alt="Egg board">
+                        <p>Egg board.   Grootte:   7'2''</p>
+                        <img src="trash.png" class="trash" alt="trash can">
+                    </div>
+                    <div class="price">
+                        <p>R 8,400</p>
+                    </div>
+                    
+                </div>
+                <div class="row1">
+                    <div class="items"><h4>Versending koste:</h4></div>
+                    <div class="price"><p>R 200</p></div>
+                </div>
+                <hr>
+                <div class="row1">
+                    <div class="items"><h4>Totaal:</h4></div>
+                    <div class="price"><h4>R 17,400</h4></div>
+                </div>
+            </div>
+            <div>
+                
+            </div>
+        </div>
+        <div class="right">
+            <form action="#" method="post">
+                <input type="text" name="name" id="name" size="30px" placeholder="Naam">
+                <input type="text" name="lastname" id="lastname" size="40px" placeholder="Van">
+                <input type="email" name="mail" id="mail" size="40px" placeholder="Email">
+                <input type="text" name="address" id="address" size="60px" placeholder="Adres">
+                <input type="text" name="city" id="city" size="40px" placeholder="Stad">
+                <input type="text" name="region" id="region" size="40px" placeholder="Staat/ Streek">
+                <input type="text" name="zip" id="zip" size="20px" placeholder="Poskode">
+                <select name="land" id="land">
+                    <option value="country">Land</option>
+                    <option value="south_africa">Suid-Afrika</option>
+                    <option value="namibia">Namibië</option>
+                    <option value="zimbabwe">Zimbabwe</option>
+                    <option value="lesotho">Lesotho</option>
+                </select>
+                <select name="pay" id="pay">
+                    <option value="payment">Betalings Metode</option>
+                    <option value="paypal">Paypal</option>
+                    <option value="visa">Visa</option>
+                    <option value="amex">American Express</option>
+                </select>
+                <input type="submit" value="Voltooi betaling" />
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="links">
+            <a href="#">Werfkaart</a>
+            <a href="#">Privaatheldsbeleid</a>
+            <a href="#">Terugbetalingsbeleid</a>
+            <a href="#">Beleidsbepalings</a>
+        </div>
+        
+        <div class="social">
+            <a href="https://www.instagram.com/safarisurfboards/" target="blank"><img src="instagram.png" alt="instagram" title="instagram"></a>
+            <a href="https://es-es.facebook.com/safari1965/" target="blank"><img src="facebook.png" alt="fb" title="fb"></a>
+            <a href="https://www.youtube.com/channel/UCDc9w643iZxPVB2L3_O03sQ" target="blank"><img src="youtube.png" alt="yt" title="yt"></a>
+        </div>
+    </footer>
+</body>
+</html>

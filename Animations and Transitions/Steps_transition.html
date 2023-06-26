@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pajarito</title>
+    <style>
+        #pajarito{
+            background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);
+            background-size: auto 100%; 
+            width: 352px;
+	        height: 500px;
+            background-position:0;
+            position:relative;
+            top:250px;
+            transition: background-position 1s -0.5s steps(10), top 0.5s linear;
+        }   
+        input#ave[type="checkbox"]:checked + div#pajarito{
+            background-position: -3600px;  
+            top:0px; 
+        } 
+    </style>
+</head>
+<body>
+    <label for="ave">Vuela pajarito!</label>
+    <input type="checkbox" id="ave" name="ave">
+    <div id="pajarito"></div>
+</body>
+</html>

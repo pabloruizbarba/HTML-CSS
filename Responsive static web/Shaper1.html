@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paruba - Surf&Soul</title>
+    <style>
+        *{
+            box-sizing: content-box;
+            margin:0px;
+            padding:0px;
+        }
+
+        body{
+            background-color: black;
+            width:100%;
+        }
+        
+        /* HEADER */
+
+        header{
+            display:grid;
+            grid-template-columns: 20% 70% 10%;
+            background-color: black;
+            position:sticky;
+            top:0;
+        }
+        .logo img{width:60%;}
+        .icons{
+            display: grid; 
+            grid-template-columns: auto;
+            grid-template-rows: 60% 40%;
+        }
+        .flags > a > img{
+            width:40px;
+            padding-top:10%;
+        }
+        .cart img{width:40px;}
+        .menu{
+            width:60%;
+            margin:auto;
+            margin-bottom:0%;
+        }
+        .menu a{
+            text-decoration:none ;
+            text-decoration: none;
+            color: black;
+            background-color: #00FFFF;
+            border: 1px solid black; 
+            text-align: center;
+            font-family: impact;;
+            padding:2%;
+            width:60px;
+            display: inline-block;
+        }
+        .menu a:hover{
+            color:white;
+            background-color: rgb(250,169,48);
+        }
+
+        .menu a.activ{ color:rgb(250,169,48); }
+        .menu a.activ:hover{ background: #00FFFF;}
+           
+        /*Shapers*/
+        
+        .shapers{
+            background-color: white;
+            display:grid;
+            grid-template-columns: 20% 40% 40%;
+            padding-top: 2%;
+            padding-bottom:2%;
+            width:100%;
+        }
+        .shapers img{width:90%;}
+        .sidebar{
+            display: flex;
+            flex-flow:column;
+            text-align: center;
+            margin-right: 10%;
+            margin-left:5%;
+        }
+        .sidebar a{
+            text-decoration: none;
+            color:black;
+            background-color: #00FFFF;
+            border: 1px solid black;
+            padding:2%;
+            font-family: impact;
+        }
+        .sidebar a.selected{color:rgb(250,169,48);}
+        .sidebar a:hover{
+            background-color: rgb(250,169,48);
+            color: white;
+        }
+        .sidebar a.selected:hover{
+            background-color: #00FFFF;
+            color:rgb(250,169,48)
+        }
+        .info p{margin-right:10%;}
+        .info h2{
+            color:rgb(250,169,48);
+            padding-bottom: 2%;
+            font-family: impact;
+        }
+       
+         /* FOOTER */
+
+         footer{
+            display: grid;
+            grid-template-columns: 80% 20%;
+         }
+         .links{
+            margin-top:3%;
+            margin-left:2%;
+         }
+         .social{
+            margin-top:7%;
+            margin-bottom: 7%;
+           
+         }
+         .links a{
+            text-decoration: none;
+            color:#00FFFF;
+            font-family: impact;
+            margin-right: 10px;
+         }
+         .links a:hover{
+            color:rgb(250,169,48);
+         }
+         .social > a > img{
+            padding-left:10%;
+            width:40px;
+         }
+
+         @media screen and (max-width:500px){
+            .logo {width:100%;}
+            .logo img{width:100%;}
+            .menu{width:100%;}
+            .menu a{width:100%;}
+            
+            header {
+                grid-template-columns: 100%;
+                grid-template-areas: 'logo'
+                                    'icons' 
+                                    'menu';
+                grid-template-rows: auto auto auto;
+                position:initial;
+            }
+            .icons{
+                width:100%;
+                grid-template-columns: 100%;
+                grid-template-areas: 'flags' 
+                                    'cart';
+                grid-template-rows: 50% 50%;
+            }
+            .flags{
+                margin-left: 40%;
+            }
+            .cart{
+                margin-top: 5%;
+                margin-left: 45%;
+                margin-bottom: 5%;
+            }
+            
+            .shapers{
+                width:100%;
+                padding:0%;
+                grid-template-columns: 100%;
+                grid-template-areas: 'sidebar' 
+                                    'info';
+                grid-template-rows: auto auto;
+            }
+
+            .sidebar{
+                flex-flow:column;
+                text-align: center;
+                width:80%;
+                margin:auto;
+                margin-top:5%;
+            }
+
+            .shapers img{
+                width:80%;
+                height:auto;
+                margin:auto;
+                margin-top: 5%;
+                margin-bottom: 5%;
+            }
+
+            .info{
+                width:100%;
+                margin:5%;
+            }
+
+
+            footer{
+                display: flex;
+                flex-direction: column;
+            }
+            .links{
+                display:flex;
+                flex-direction: column;
+                width:100%;
+            }
+            .links a{margin-left: 25%;}
+            .social{
+                display:flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+            .social > a > img{
+                padding-left:10%;
+                width:20px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <a class="logo" href="Home.html"><img src="Paruba.png" alt="logo" title="Home"></a>
+        <div class="menu">
+            <a href="Home.html">HOME</a><a href="Boards.html">BOARDS</a><a class="activ">SHAPERS</a><a href="About.html">ABOUT</a><a href="Contact.html">CONTACT</a>
+        </div>    
+     
+        <div class="icons">
+            <div class="flags">
+                <a><img src="united-kingdom.png" alt="English" title="English"></a>
+                <a href="Shaper1_Afrikaans.html"><img src="south-africa.png" alt="Afrikaans" title="Afrikaans"></a>
+            </div>
+            <a class="cart" href="Basket.html"><img src="carrito.png" alt="Shopping_cart" title="Shopping cart"></a>
+        </div>     
+    </header>
+
+    <div class="shapers">
+        <div class="sidebar">
+            <a class="selected">Spider Murphy</a>
+            <a href="shaper2.html">Sam Christianson</a>   
+        </div>
+        
+        <div class="info">
+            <h2>SPIDER MURPHY</h2>
+            <p>Having shaped boards for more than 20 World Champions over a 55 year period, Spider has developed a consultative style that brings out the best from some of the world’s most innovative surfers. Part of his magic process is inviting champs to shape the board with him.<br><br>
+
+                It has been said that twice, he has successfully disrupted the world's surfboard industry with his creations. First with Shaun Tompson's "Pink Banana” Pipeline board he created in 1974 and then again with green "The Saint" 5'5" twinnie for Martin Potter in 1981.<br><br>
+                
+                Spider first shaped a board in 1963 at the tender age of 16 and founded War Surfboards before joining Graham Hynes at Paruba Surfboards as their main Shaper in 1972, following the departure of Andrew Ogilvie.
+            </p>
+        </div>
+
+        <img src="Spider.webp" alt="Spider Murphy">
+          
+    </div>
+
+    <footer>
+        <div class="links">
+            <a href="#">Sitemap</a>
+            <a href="#">Privacy policy</a>
+            <a href="#">Refund policy</a>
+            <a href="#">Terms of policy</a>
+        </div>
+        
+        <div class="social">
+            <a href="https://www.instagram.com/safarisurfboards/" target="blank"><img src="instagram.png" alt="instagram" title="instagram"></a>
+            <a href="https://es-es.facebook.com/safari1965/" target="blank"><img src="facebook.png" alt="fb" title="fb"></a>
+            <a href="https://www.youtube.com/channel/UCDc9w643iZxPVB2L3_O03sQ" target="blank"><img src="youtube.png" alt="yt" title="yt"></a>
+        </div>
+    </footer>
+</body>
+</html>
